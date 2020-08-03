@@ -17,7 +17,7 @@ Where
 * `Length` is the length or difficulty of the Muid key.  Typically this is >6.
 * `X` is the public prefix of the key. This will typically be the friendly name of the Muid.  An example is `603e1e55f1ea0ded22e4b4ce7f532f44` which when converted to a Muid is "Homeless Flea".
 
-See the circuit implementation in `(circuit.circom)[circuit.circom]`.
+See the circuit implementation in [circuit.circom](circuit.circom) for all of the details.
 
 ## Usage
 
