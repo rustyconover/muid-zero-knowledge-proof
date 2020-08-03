@@ -3,10 +3,9 @@ Zero Knowledge Proof of Memorable Unique Identifiers (Muid)
 
 It is useful to be able to prove that you own a [Memorable Unique Identifier](https://www.microprediction.org/muids.html) without revealing the private key associated with it.
 
-This will be useful for facilitating payments or other transactions.
+This will be useful for facilitating payments based on performance or allowing logins to a website using the Muid as your identity.
 
-This repo uses snarkjs and circon to construct a zero-knowledge proof that verifies that the creator has a 16 byte value 
-that produces a specified public key prefix.
+This repo uses [snarkjs](https://github.com/iden3/snarkjs) and [circon](https://github.com/iden3/circom) to construct a zero-knowledge proof that verifies that the creator has a 16 byte value that produces a specified public key prefix.
 
 More formally it shows:
 
@@ -18,6 +17,7 @@ Where
 * `Length` is the length or difficulty of the Muid key.  Typically this is >6.
 * `X` is the public prefix of the key. This will typically be the friendly name of the Muid.  An example is `603e1e55f1ea0ded22e4b4ce7f532f44` which when converted to a Muid is "Homeless Flea".
 
+See the circuit implementation in [circuit.circom](circuit.circom) for all of the details.
 
 ## Usage
 
@@ -35,6 +35,7 @@ npm install -g circom snarkjs
 
 2. Run `make proof`
 
+This may take a while as it generates a new circuit.  Typically new circuits wouldn't be made all of the time, just the inputs to the circuit would change.  Currently there is a different circuit for each key length.
 
 ## Caveats
 
@@ -53,3 +54,7 @@ The sizes don't seem unreasonable for online use.  Here is an example proof for 
 -rw-r--r--  1 rusty  staff    466316 Aug  2 21:07 circuit.wasm
 -rw-r--r--  1 rusty  staff  22713952 Aug  2 21:08 circuit_final.zkey
 ```
+
+## Future Uses
+
+1. Allow identities to be asserted for Memorable Unique Identifiers via the web which will open the door to payments and personalized leaderboards.
