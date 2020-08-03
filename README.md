@@ -3,7 +3,7 @@ Zero Knowledge Proof of Memorable Unique Identifiers (Muid)
 
 It is useful to be able to prove that you own a [Memorable Unique Identifier](https://www.microprediction.org/muids.html) without revealing the private key associated with it.
 
-This will be useful for facilitating payments or other transactions.
+This will be useful for facilitating payments based on performance or allowing logins to a website using the Muid as your identity.
 
 This repo uses [snarkjs](https://github.com/iden3/snarkjs) and [circon](https://github.com/iden3/circom) to construct a zero-knowledge proof that verifies that the creator has a 16 byte value that produces a specified public key prefix.
 
@@ -17,6 +17,7 @@ Where
 * `Length` is the length or difficulty of the Muid key.  Typically this is >6.
 * `X` is the public prefix of the key. This will typically be the friendly name of the Muid.  An example is `603e1e55f1ea0ded22e4b4ce7f532f44` which when converted to a Muid is "Homeless Flea".
 
+See the circuit implementation in `(circuit.circom)[circuit.circom]`.
 
 ## Usage
 
