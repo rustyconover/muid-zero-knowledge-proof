@@ -34,3 +34,8 @@ npm install -g circom snarkjs
 ```
 
 2. Run `make proof`
+
+
+## Caveats
+
+1. Right now the Makefile just fakes some entropy into the Powers of Tau init steps, this is just for development purposes.  If these proofs are going to be used for real, actual entropy should be provided.
