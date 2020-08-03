@@ -53,3 +53,7 @@ The sizes don't seem unreasonable for online use.  Here is an example proof for 
 -rw-r--r--  1 rusty  staff    466316 Aug  2 21:07 circuit.wasm
 -rw-r--r--  1 rusty  staff  22713952 Aug  2 21:08 circuit_final.zkey
 ```
+
+## Future Uses
+
+1. Allow identities to be asserted for Memorable Unique Identifiers via the web which will open the door to payments and personalized leaderboards.
