@@ -1,5 +1,7 @@
-CLEAN:
-	-rm -f circuit.r1cs circuit.sym circuit.wasm circuit*.zkey proof.json public.json verification_key.json
+
+.PHONY: clean
+clean:
+	-rm -f pot12* circuit.r1cs circuit.sym circuit.wasm circuit*.zkey proof.json public.json verification_key.json
 
 pot12_0000.ptau:
 	snarkjs powersoftau new bn128 16 pot12_0000.ptau -v
@@ -53,5 +55,5 @@ witness.wtns: circuit.wasm input.json circuit.sym
 proof.json public.json: circuit_final.zkey witness.wtns
 	snarkjs groth16 prove circuit_final.zkey witness.wtns proof.json public.json
 
-verify: public.json proof.json verification_key.json
+proof: public.json proof.json verification_key.json
 	snarkjs groth16 verify verification_key.json public.json proof.json
