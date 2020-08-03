@@ -21,10 +21,35 @@ Where
 
 ## Usage
 
+0. Clone this repo with submodules enabled.  
+  
+```
+git clone --recurse-submodules git@github.com:rustyconover/muid-zero-knowledge-proof.git
+```
+
 1. First install circom and snarkjs
 
 ```
 npm install -g circom snarkjs
 ```
 
-2. Run make.
+2. Run `make proof`
+
+
+## Caveats
+
+1. Right now the Makefile just fakes some entropy into the Powers of Tau init steps, this is just for development purposes.  If these proofs are going to be used for real, actual entropy should be provided.
+
+## Sizes
+
+The sizes don't seem unreasonable for online use.  Here is an example proof for a Muid with a length of 12.
+
+```
+-rw-r--r--  1 rusty  staff       786 Aug  2 21:08 proof.json
+-rw-r--r--  1 rusty  staff        95 Aug  2 21:08 public.json
+-rw-r--r--  1 rusty  staff      4935 Aug  2 21:08 verification_key.json
+-rw-r--r--  1 rusty  staff  12868364 Aug  2 21:07 circuit.r1cs
+-rw-r--r--  1 rusty  staff  14589134 Aug  2 21:07 circuit.sym
+-rw-r--r--  1 rusty  staff    466316 Aug  2 21:07 circuit.wasm
+-rw-r--r--  1 rusty  staff  22713952 Aug  2 21:08 circuit_final.zkey
+```
