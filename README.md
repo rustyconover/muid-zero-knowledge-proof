@@ -17,3 +17,14 @@ Where
 * `private_key` is the private key of the Muid owner which is 16 bytes.  An example is: `3f06e5b0d027fb4e33a5207dd112892e` which is the hex encoded key for the Muid with the public name of "Homeless Flea".
 * `Length` is the length or difficulty of the Muid key.  Typically this is >6.
 * `X` is the public prefix of the key. This will typically be the friendly name of the Muid.  An example is `603e1e55f1ea0ded22e4b4ce7f532f44` which when converted to a Muid is "Homeless Flea".
+
+
+## Usage
+
+1. First install circom and snarkjs
+
+```
+npm install -g circom snarkjs
+```
+
+2. Run make.
