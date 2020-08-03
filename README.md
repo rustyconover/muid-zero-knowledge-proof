@@ -5,8 +5,7 @@ It is useful to be able to prove that you own a [Memorable Unique Identifier](ht
 
 This will be useful for facilitating payments or other transactions.
 
-This repo uses snarkjs and circon to construct a zero-knowledge proof that verifies that the creator has a 16 byte value 
-that produces a specified public key prefix.
+This repo uses [snarkjs](https://github.com/iden3/snarkjs) and [circon](https://github.com/iden3/circom) to construct a zero-knowledge proof that verifies that the creator has a 16 byte value that produces a specified public key prefix.
 
 More formally it shows:
 
