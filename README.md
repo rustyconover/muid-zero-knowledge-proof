@@ -34,5 +34,3 @@ npm install -g circom snarkjs
 ```
 
 2. Run `make proof`
-
-3. 
