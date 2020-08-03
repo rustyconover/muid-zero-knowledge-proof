@@ -1,7 +1,7 @@
 # muid-zero-knowledge-proof
 Zero Knowledge Proof of Memorable Unique Identifiers (Muid)
 
-It is useful to be able to prove that you own a (Memorable Unique Identifier)[https://www.microprediction.org/muids.html] without revealing the private key associated with it.
+It is useful to be able to prove that you own a [Memorable Unique Identifier](https://www.microprediction.org/muids.html) without revealing the private key associated with it.
 
 This will be useful for facilitating payments or other transactions.
 
