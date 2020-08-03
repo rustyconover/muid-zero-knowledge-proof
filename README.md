@@ -10,7 +10,13 @@ that produces a specified public key prefix.
 
 More formally it shows:
 
-`substr(Sha256(hex(Muid private key)), length) === X`
+`substr(Sha256(hex(private_key)), Length) === X`
+
+Where 
+
+`private_key` is the private key of the Muid owner which is 16 bytes.
+`Length` is the length or difficulty of the Muid key.
+`X` is the public prefix of the key. This will typically be the friendly name of the Muid.
 
 Where X is a specified public prefix which is used as an identity at [microprediction.org](https://www.microprediction.org).
 
