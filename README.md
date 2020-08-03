@@ -34,6 +34,7 @@ npm install -g circom snarkjs
 
 2. Run `make proof`
 
+This may take a while as it generates a new circuit.  Typically new circuits wouldn't be made all of the time, just the inputs to the circuit would change.  Currently there is a different circuit for each key length.
 
 ## Caveats
 
