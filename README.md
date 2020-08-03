@@ -21,10 +21,18 @@ Where
 
 ## Usage
 
+0. Clone this repo with submodules enabled.  
+  
+```
+git clone --recurse-submodules git@github.com:rustyconover/muid-zero-knowledge-proof.git
+```
+
 1. First install circom and snarkjs
 
 ```
 npm install -g circom snarkjs
 ```
 
-2. Run make.
+2. Run `make proof`
+
+3. 
